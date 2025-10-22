@@ -136,6 +136,45 @@ body {
   line-height: 1.8;
 }
 
+/* Program Description Section */
+.program-description {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.program-description h2 {
+  font-size: 32px;
+  color: #003d82;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.description-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.description-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.description-content p:last-child {
+  margin-bottom: 0;
+}
+
+.description-content strong {
+  color: #003d82;
+  font-weight: 700;
+}
+
 /* Trainers Section */
 .trainers-section {
   padding: 80px 0;
@@ -611,7 +650,9 @@ body {
 
   .thank-you h2,
   .welcome h2,
-  .section-title {
+  .section-title,
+  .program-description h2 {
+    /* Added program-description h2 */
     font-size: 28px;
   }
 
@@ -666,6 +707,16 @@ body {
     padding: 24px;
     margin-top: 40px;
   }
+
+  /* Added responsive styles for program description */
+  .program-description .description-content {
+    padding: 30px;
+    margin: 0 20px;
+  }
+
+  .program-description .description-content p {
+    text-align: left; /* Adjust for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
@@ -712,6 +763,15 @@ body {
   }
 
   .trainer-info {
+    padding: 20px;
+  }
+
+  /* Added mobile styles for program description */
+  .program-description {
+    padding: 40px 0;
+  }
+
+  .program-description .description-content {
     padding: 20px;
   }
 }
