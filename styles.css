@@ -17,6 +17,123 @@ body {
   padding: 0 20px;
 }
 
+/* Added header with language switcher */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #003d82;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 8px;
+  background-color: #f0f0f0;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.lang-btn {
+  background-color: transparent;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.lang-btn.active {
+  background-color: #0066cc;
+  color: white;
+}
+
+/* Enhanced feedback banner - larger and more prominent */
+.feedback-banner-large {
+  background: linear-gradient(135deg, #0066cc 0%, #003d82 100%);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.feedback-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feedback-icon {
+  flex-shrink: 0;
+}
+
+.feedback-icon svg {
+  width: 80px;
+  height: 80px;
+  opacity: 0.9;
+}
+
+.feedback-text {
+  flex: 1;
+  text-align: left;
+  min-width: 300px;
+}
+
+.feedback-text h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.feedback-text p {
+  font-size: 18px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.btn-survey-large {
+  background-color: white;
+  color: #0066cc;
+  padding: 18px 40px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-survey-large:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* Feedback Banner */
 .feedback-banner {
   background-color: #0066cc;
@@ -636,6 +753,44 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Added responsive styles for header */
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Added responsive styles for enhanced feedback banner */
+  .feedback-banner-large {
+    padding: 40px 0;
+  }
+
+  .feedback-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .feedback-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .feedback-text {
+    text-align: center;
+  }
+
+  .feedback-text h2 {
+    font-size: 24px;
+  }
+
+  .feedback-text p {
+    font-size: 16px;
+  }
+
+  .btn-survey-large {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+
   .hero-title {
     font-size: 32px;
   }
@@ -672,11 +827,6 @@ body {
 
   .tab-btn {
     width: 100%;
-  }
-
-  .feedback-banner .container {
-    flex-direction: column;
-    gap: 12px;
   }
 
   /* Added responsive styles for trainers carousel */
@@ -773,6 +923,19 @@ body {
 
   .program-description .description-content {
     padding: 20px;
+  }
+
+  /* Added mobile responsive styles for feedback banner */
+  .feedback-banner-large {
+    padding: 30px 0;
+  }
+
+  .feedback-text h2 {
+    font-size: 20px;
+  }
+
+  .feedback-text p {
+    font-size: 14px;
   }
 }
 
